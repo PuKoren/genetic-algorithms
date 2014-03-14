@@ -19,12 +19,12 @@
 
 //first way to mutate bits, using char and modifing bits in memory
 void int_to_bits(int value, unsigned char* tab);
-void mutate_bits(unsigned char* tab, int tabSize, int muteRate);
-void mutate_bytes(unsigned char* tab, int tabSize, int muteRate);
+void mutate_bits(unsigned char* tab, int tab_size, int mute_rate);
+void mutate_bytes(unsigned char* tab, int tab_size, int mute_rate);
 
 //second way to mutate bits, with short arrays that symbolize bit chain with 0 and 1
-void mutate_bits_int(unsigned short* tab, int tabSize, int muteRate);
-void crossover_int(unsigned short* tab1, unsigned short* tab2, int tabSize, int muteRate);
+unsigned short* mutate_bits_int(unsigned short* tab, int tab_size, int mute_rate);
+unsigned short* crossover_int(unsigned short* tab1, unsigned short* tab2, int tab_size, int mute_rate, int cross_count);
 
 //initialise stuff needed to generate populations
 void init();
