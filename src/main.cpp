@@ -34,8 +34,6 @@ int main(int argc, char** argv){
     a.Init();
 
     //glutMainLoop();
-    unsigned char* tab;
-    int_to_bits(12, tab);
 
     return EXIT_SUCCESS;
 }

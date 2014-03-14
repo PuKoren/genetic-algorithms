@@ -29,6 +29,16 @@ void mutate_bytes(unsigned char* tab, int tabSize, int muteRate){
     }
 }
 
+//mutate takes a "binary" short array, with values being either 0 or 1.
+//if value is not 0 or 1, it is set to 0
+void mutate_bits_int(unsigned short* tab, int tabSize, int muteRate){
+    for(int i = 0; i < tabSize; i++){
+        if(rand()%100 < muteRate){
+            tab[i] = (tab[i] == 0)?1:0;
+        }
+    }
+}
+
 void int_to_bits(int value, unsigned char* tab){
     tab = new unsigned char[sizeof(int) * CHAR_BIT];
     int mask,masked_n,i =  0;
